@@ -11,8 +11,9 @@ pipeline {
                     sudo docker build -t test .
                     sudo docker images
 
-                    docker build -t test .
-                    docker images
+                    sudo docker build -t test .
+                    sudo usermod -aG docker $USER
+                    sudo docker images
 
                     """
                 }
